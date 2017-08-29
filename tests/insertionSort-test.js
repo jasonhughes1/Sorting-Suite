@@ -28,5 +28,7 @@ describe('TDD with insertionSort', () => {
     assert.equal(array[0] <= array[1], true);
     assert.equal(array[Math.floor(array.length / 2)] <= array[Math.floor(array.length / 2) +1], true);
     assert.equal(array[array.length - 1] >= array[array.length - 2], true);
+
   })
+  
 })
