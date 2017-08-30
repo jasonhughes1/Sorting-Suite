@@ -1,18 +1,8 @@
 import { assert } from 'chai'
 import bubbleSort from '../scripts/bubbleSort.js'
+import randomArrayGenerator from '../scripts/randomArrayGenerator.js'
 
 
-function randomArrayGenerator(count, max) {
-  let numbers = [];
-
-  for (let i = 0; i < count; i++) {
-    let randomNumber = Math.floor(Math.random() * max);
-
-    numbers.push(randomNumber);
-  }
-
-  return numbers;
-}
 
 describe('TDD with bubbleSort', () => {
 

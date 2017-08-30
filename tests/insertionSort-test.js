@@ -1,18 +1,8 @@
 import { assert } from 'chai'
 import insertionSort from '../scripts/insertionSort.js'
+import randomArrayGenerator from '../scripts/randomArrayGenerator.js'
 
 
-function randomArrayGenerator(count, max) {
-  let numbers = [];
-
-  for (let i = 0; i < count; i++) {
-    let randomNumber = Math.floor(Math.random() * max);
-
-    numbers.push(randomNumber);
-  }
-
-  return numbers;
-}
 
 
 describe('TDD with insertionSort', () => {
@@ -30,5 +20,5 @@ describe('TDD with insertionSort', () => {
     assert.equal(array[array.length - 1] >= array[array.length - 2], true);
 
   })
-  
+
 })
