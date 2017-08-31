@@ -1,9 +1,10 @@
 var a = [10, 9, 8, 7, 6, 5, 4, 3, 2];
 
 function mergeSort(array) {
-  debugger;
-    if (array.length < 2)
+  // debugger;
+    if (array.length < 2) {
         return array;
+      }
     var middle = Math.floor(array.length / 2);
     var left   = array.slice(0, middle);
     var right  = array.slice(middle, array.length);
