@@ -12,11 +12,30 @@ describe('TDD with mergeSort', () => {
   })
 
 
-// it('should sort an array of more than one number', () => {
-//   let array = randomArrayGenerator(10000, 20000)
-//   mergeSort(array);
-//   assert.equal(array[0] <= array[1], true);
-//   assert.equal(array[Math.floor(array.length / 2)] <= array[Math.floor(array.length / 2) +1], true);
-//   assert.equal(array[array.length - 1] >= array[array.length - 2], true);
-//   })
+    it('should sort an array', () => {
+      let array = [4, 3, 2, 1];
+
+      assert.deepEqual(array, [4, 3, 2, 1]);
+      assert.deepEqual(mergeSort(array), [1, 2, 3, 4])
+    })
+
+    it('should sort an array of large numbers', () => {
+      let array = randomArrayGenerator(1320, 2000);
+
+      assert.equal(mergeSort(array)[0] <= mergeSort(array)[1], true)
+    })
+
+    it('should sort an array of negative numbers', () => {
+      let array = [-1, -2, -3, -4];
+
+      assert.deepEqual(array, [-1, -2, -3, -4]);
+      assert.deepEqual(mergeSort(array), [-4, -3, -2, -1])
+    })
+
+
+    it('should sort an array of large negative numbers', () => {
+      let array = randomArrayGenerator(-1320, -2000);
+
+      assert.equal(mergeSort(array)[0] <= mergeSort(array)[1], false)
+      })
 })
