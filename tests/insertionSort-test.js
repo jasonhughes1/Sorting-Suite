@@ -4,7 +4,6 @@ import randomArrayGenerator from '../scripts/randomArrayGenerator.js'
 
 
 
-
 describe('TDD with insertionSort', () => {
 
   it('should be a function', () => {
@@ -20,5 +19,4 @@ describe('TDD with insertionSort', () => {
     assert.equal(array[array.length - 1] >= array[array.length - 2], true);
 
   })
-
 })
